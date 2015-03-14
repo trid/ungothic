@@ -1,9 +1,13 @@
+from sdl2uipy import EventType
+
 __author__ = 'TriD'
 
 
 class UIManager(object):
-    def __init__(self):
+    def __init__(self, view):
         self.items = []
+        self.view = view
+        view.application.event_manager.add_listener(EventType.MOUSEBUTTON_UP, self.get_mouse_message)
 
     def add_item(self, item):
         self.items.append(item)

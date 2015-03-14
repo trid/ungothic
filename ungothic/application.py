@@ -14,8 +14,8 @@ class Application(object):
 
     def __init__(self):
         self.running = True
-        self.view = View()
         self.event_manager = EventManager(self)
+        self.view = View(self)
 
     def start(self):
         while self.running:
