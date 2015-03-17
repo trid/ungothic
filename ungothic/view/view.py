@@ -14,4 +14,5 @@ class View(object):
 
     def draw(self):
         self.sprite_manager['castle_bg'].draw(0, 0)
+        self.ui_manager.draw()
         sdl2uipy.flip_screen()

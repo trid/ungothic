@@ -12,6 +12,9 @@ class UIManager(object):
     def add_item(self, item):
         self.items.append(item)
 
+    def remove_item(self, item):
+        self.items.remove(item)
+
     def draw(self):
         for item in self.items:
             item.draw()

@@ -1,7 +1,8 @@
-from ungothic.application import Application
+from ungothic.application import application
+from ungothic.game_state import GameState
 
 __author__ = 'TriD'
 
 
-application = Application()
+application.push_state(GameState())
 application.start()
