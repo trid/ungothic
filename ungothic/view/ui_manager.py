@@ -17,7 +17,8 @@ class UIManager(object):
 
     def draw(self):
         for item in self.items:
-            item.draw()
+            if item.visible:
+                item.draw()
 
     def get_mouse_message(self, button, x, y):
         for item in self.items:
